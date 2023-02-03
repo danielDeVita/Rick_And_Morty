@@ -1,0 +1,39 @@
+.container {
+    width: 50%;
+    margin-left: auto;
+    /*  outline: solid 1px black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    /* border: 10px blue solid; */
+}
+
+input {
+    font-size: 14px;
+    position: relative;
+    border-radius: 3px;
+    background: #f2f2f2;
+    width: 100px
+}
+
+.container button {
+    margin: .5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .container button {
+        /*  width: 45%; */
+        margin: 0px;
+        scale: .9;
+    }
+
+    input {
+        width: 30%;
+    }
+}

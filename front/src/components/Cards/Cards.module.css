@@ -1,0 +1,12 @@
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  background-color: #1a1919;
+}
+
+@media screen and (max-width: 600px) {
+  .cardContainer {
+    flex-wrap: wrap;
+  }
+}

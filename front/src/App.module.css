@@ -1,0 +1,16 @@
+.App {
+    /*  background-color: #1a1919; */
+    background-color: white;
+}
+
+.image {
+    width: 600px;
+    display: block;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .image {
+        width: 90%
+    }
+}
