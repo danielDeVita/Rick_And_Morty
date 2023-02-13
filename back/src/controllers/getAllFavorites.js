@@ -1,4 +1,5 @@
-const axios = require("axios");
+const { Favorite } = require('../DB_connection');
+/* const axios = require("axios");
 
 const getCharById = (res, id) => {
     axios(`https://rickandmortyapi.com/api/character/${id}`)
@@ -20,6 +21,16 @@ const getCharById = (res, id) => {
                 .writeHead(500, { "Content-Type": "text/plain" })
                 .end(error.message = `Character with id: ${id} not found`)
         })
-}
+} */
 
-module.exports = getCharById 
+const getAllFavorites = async () => {
+    try {
+        const allFavorites = await Favorite.findAll()
+        if (!allFavorites) throw new Error("No hay favoritos")
+        return allFavorites
+    } catch (error) {
+        return { error: error.message }
+    }
+};
+
+module.exports = getAllFavorites;
